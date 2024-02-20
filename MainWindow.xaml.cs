@@ -26,9 +26,11 @@ namespace LE_IComparble_StephanieLopez
             InitializeComponent();
             TheStudents();
 
-            Student_SortGenEdGradeAsd grade = new Student_SortGenEdGradeAsd(Student_SortGenEdGradeAsd.Order.Descending);
+            //Student_SortGenEdGradeAsd grade = new Student_SortGenEdGradeAsd(Student_SortGenEdGradeAsd.Order.Descending);
 
-            students.Sort();
+            //Student_SortFirstNameDcs firstNameDsc = new Student_SortFirstNameDcs();
+
+            //students.Sort(firstNameDsc);
             DisplayStudent();
         }
 
@@ -57,27 +59,17 @@ namespace LE_IComparble_StephanieLopez
 
         void B_FirstName_Click(object sender, RoutedEventArgs e)
         {
-            students.Sort();
+
         }
 
-        SortOrder order = SortOrder.Ascending;
         void B_CSIGrade_Click(object sender, RoutedEventArgs e)
         {
-            if (order == SortOrder.Ascending)
-            {
-                students.Sort(new Student_SortCSIGrade(SortOrder.Ascending));
-                order = SortOrder.Descending; // Toggle to descending order
-            }
-            else
-            {
-                students.Sort(new Student_SortCSIGrade(SortOrder.Descending));
-                order = SortOrder.Ascending; // Toggle to ascending order
-            }
+
         }
 
         public void B_GenEd_Click(object sender, RoutedEventArgs e)
         {
-            students.Sort(new Student_SortLastNameAsd());
+
         }
     }
 }
